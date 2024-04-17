@@ -115,7 +115,7 @@ This tutorial is base on [The Rust Programming Language](https://doc.rust-lang.o
 ## 1. Getting Started
 ### 1.1. Installation
 ### 1.2. Hello, World!
-Now open the main.rs file you just created and enter the code in Listing 1-1.
+- Now open the main.rs file you just created and enter the code in Listing 1-1.
 Filename: main.rs
 ```rs
 fn main() {
