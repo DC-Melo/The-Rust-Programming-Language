@@ -2,8 +2,6 @@
 rust language code base on https://doc.rust-lang.org/book/ch01-02-hello-world.html
 
 This tutorial is base on [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) 
-
-
 ## Table of Contents
 
 - [Foreword](#foreword)
@@ -117,7 +115,59 @@ This tutorial is base on [The Rust Programming Language](https://doc.rust-lang.o
 ## 1. Getting Started
 ### 1.1. Installation
 ### 1.2. Hello, World!
+Now open the main.rs file you just created and enter the code in Listing 1-1.
+Filename: main.rs
+```rs
+fn main() {
+    println!("Hello, world!");
+}
+```
+enter the following commands to compile and run the file:
+```sh
+❯ rustc main.rs
+❯ rustc main.rs
+❯ ./main
+Hello, world!
+```
 ### 1.3. Hello, Cargo!
+- Install Cargo and use Cargo to make projects.
+```sh
+❯ cargo --version                                                                              
+cargo 1.75.0 (1d8b05cdd 2023-11-20)
+```
+- Creating a Project with Cargo
+```
+❯ cargo new hello_cargo
+     Created binary (application) `hello_cargo` package
+❯ cd hello_cargo
+```
+- Building and Running a Cargo Project
+```sh
+❯ cargo build
+   Compiling hello_cargo v0.1.0 (/home/dc/5W/github/DC-Melo/The-Rust-Programming-Language/01-Getting
+-Started/1.3.Hello-Cargo/hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+# run the executable with this command:
+❯ ./target/debug/hello_cargo
+Hello, world!
+# we can also use cargo run to compile the code and then run the resultant executable all in one command:
+❯ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/hello_cargo`
+Hello, world!
+# cargo check. This command quickly checks your code to make sure it compiles but doesn’t produce an executable:
+❯ cargo check
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+
+```
+- Building for Release 
+```sh 
+❯ cargo build --release
+   Compiling hello_cargo v0.1.0 (/home/dc/5W/github/DC-Melo/The-Rust-Programming-Language/01-Getting
+-Started/1.3.Hello-Cargo/hello_cargo)
+    Finished release [optimized] target(s) in 0.15s
+```
+
 ## 2. Programming a Guessing Game
 ## 3. Common Programming Concepts
 ### 3.1. Variables and Mutability
@@ -215,7 +265,4 @@ This tutorial is base on [The Rust Programming Language](https://doc.rust-lang.o
 ### 21.5. E - Editions
 ### 21.6. F - Translations of the Book
 ### 21.7. G - How Rust is Made and “Nightly Rust”
-
-
-
 
