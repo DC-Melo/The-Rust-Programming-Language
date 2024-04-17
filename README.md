@@ -158,7 +158,6 @@ Hello, world!
 # cargo check. This command quickly checks your code to make sure it compiles but doesn’t produce an executable:
 ❯ cargo check
     Finished dev [unoptimized + debuginfo] target(s) in 0.00s
-
 ```
 - Building for Release 
 ```sh 
@@ -169,6 +168,55 @@ Hello, world!
 ```
 
 ## 2. Programming a Guessing Game
+- Setting Up a New Project
+```sh
+❯ cargo new guessing_game
+     Created binary (application) `guessing_game` package
+dc in 🌐 dc-iMac in The-Rust-Programming-Language/02-Programming-a-Guessing-Game on  02.Programming-a-Guessing-Game [!?] 
+❯ cd guessing_game
+dc in 🌐 dc-iMac in The-Rust-Programming-Language/02-Programming-a-Guessing-Game/guessing_game on  02.Programming-a-Guessing-Game [!?] is 📦
+ v0.1.0 via 🦀 v1.75.0 
+❯ cargo run
+   Compiling guessing_game v0.1.0 (/home/dc/5W/github/DC-Melo/The-Rust-Programming-Language/02-Programming-a-Guessing-Game/guessing_game)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.16s
+     Running `target/debug/guessing_game`
+Hello, world!
+```
+- Processing a Guess
+Filename: src/main.rs
+
+```rs
+use std::io;
+
+fn main() {
+    println!("Guess the number!");
+
+    println!("Please input your guess.");
+
+    let mut guess = String::new();
+
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guessed: {guess}");
+}
+```
+
+```sh
+❯ cargo build
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+❯ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/guessing_game`
+Guess the number!
+Please input your guess.
+10
+You guessed: 10
+```
+
+
+
 ## 3. Common Programming Concepts
 ### 3.1. Variables and Mutability
 ### 3.2. Data Types
